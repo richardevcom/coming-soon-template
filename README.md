@@ -13,7 +13,8 @@ The main purpose of this boilerplate is to simplify the configuration of Tailwin
     ```
 
 2. Install the dependencies:
-    Open dir:
+    
+    _Open dir_
     ```bash
     cd unknown-coming-soon
     ```
