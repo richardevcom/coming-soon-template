@@ -1,23 +1,23 @@
-const { watch, series, src, dest } = require("gulp");
-var browserSync = require("browser-sync").create();
-var postcss = require("gulp-postcss");
-const imagemin = require("gulp-imagemin");
+const { watch, series, src, dest } = require("gulp")
+var browserSync = require("browser-sync").create()
+var postcss = require("gulp-postcss")
+const imagemin = require("gulp-imagemin")
+const cleanCSS = require("gulp-clean-css")
 
 // Task for compiling our CSS files using PostCSS
 function cssTask(cb) {
 	return src("./src/*.css") // read .css files from ./src/ folder
 		.pipe(postcss()) // compile using postcss
+		.pipe(cleanCSS({ compatibility: "ie8" }))
 		.pipe(dest("./assets/css")) // paste them in ./assets/css folder
-		.pipe(browserSync.stream());
-	cb();
+		.pipe(browserSync.stream())
+	cb()
 }
 
 // Task for minifying images
 function imageminTask(cb) {
-	return src("./assets/images/*")
-		.pipe(imagemin())
-		.pipe(dest("./assets/images"));
-	cb();
+	return src("./assets/images/*").pipe(imagemin()).pipe(dest("./assets/images"))
+	cb()
 }
 
 function browsersyncServe(cb) {
@@ -25,22 +25,22 @@ function browsersyncServe(cb) {
 		server: {
 			baseDir: "./",
 		},
-	});
-	cb();
+	})
+	cb()
 }
 
 function browsersyncReload(cb) {
-	browserSync.reload();
-	cb();
+	browserSync.reload()
+	cb()
 }
 
 // Watch Files & Reload browser after tasks
 function watchTask() {
-	watch("./**/*.html", browsersyncReload);
-	watch(["./src/*.css"], series(cssTask, browsersyncReload));
+	watch("./**/*.html", browsersyncReload)
+	watch(["./src/*.css"], series(cssTask, browsersyncReload))
 }
 
 // Default Gulp Task
-exports.default = series(cssTask, browsersyncServe, watchTask);
-exports.css = cssTask;
-exports.images = imageminTask;
+exports.default = series(cssTask, browsersyncServe, watchTask)
+exports.css = cssTask
+exports.images = imageminTask

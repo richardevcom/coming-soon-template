@@ -4,21 +4,51 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="assets/css/styles.css" rel="stylesheet" />
-		<title>
-			Tailwind CSS Boilerplate (PostCSS + Browsersync + Gulp 4 + Imagemin)
-		</title>
+		<title>UNKNOWN Coming Soon</title>
+		<link rel="icon" href="assets/img/favicon.png" />
 	</head>
 	<body>
-		<div class="container mx-auto py-12">
-			<h1 class="text-4xl font-bold text-gray-900">
-				Tailwind CSS Boilerplate (PostCSS + Browsersync + Gulp 4 +
-				Imagemin)
-			</h1>
-			<p class="text-lg mt-4">
-				Tailwind CSS boilerplate for HTML projects. Bare-bones HTML
-				template with Tailwind CSS, PostCSS, Gulp, Imagemin &amp;
-				Browsersync.
-			</p>
+		<div class="container mx-auto">
+			<div class="flex flex-col h-screen bg-center bg-cover bg-no-repeat">
+				<div class="grid place-items-start text-left md:place-items-center md:text-center w-full mx-auto p-10 my-20 my-auto space-y-5 cursor-pointer">
+					<svg class="logo animate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.8 25.73">
+						<path d="M9.13,8.22h2v5.44a2.06,2.06,0,1,0,4.12,0V8.22h2v5.44a3.87,3.87,0,0,1-4.05,4.05,3.87,3.87,0,0,1-4-4.05Z" transform="translate(0 0)" style="fill: #0fe7c7" />
+						<polygon points="20.21 8.22 22 8.22 26.51 13.99 26.51 8.22 28.5 8.22 28.5 17.51 26.71 17.51 22.2 11.74 22.2 17.51 20.21 17.51 20.21 8.22" style="fill: #0fe7c7" />
+						<polygon points="31.55 8.22 33.54 8.22 33.54 12.2 37.13 8.22 39.51 8.22 36.06 12.07 39.78 17.51 37.46 17.51 34.74 13.53 33.54 14.79 33.54 17.51 31.55 17.51 31.55 8.22" style="fill: #0fe7c7" />
+						<polygon points="41.5 8.22 43.29 8.22 47.8 13.99 47.8 8.22 49.79 8.22 49.79 17.51 48 17.51 43.49 11.74 43.49 17.51 41.5 17.51 41.5 8.22" style="fill: #0fe7c7" />
+						<path d="M57.29,15.85a3,3,0,1,0-3-3,3,3,0,0,0,3,3m0-7.83a4.92,4.92,0,0,1,5,4.84,5,5,0,0,1-10.08,0,4.91,4.91,0,0,1,5-4.84" transform="translate(0 0)" style="fill: #0fe7c7" />
+						<polygon
+							points="63.52 8.22 65.58 8.22 67.5 14.46 67.57 14.46 69.49 8.22 71.35 8.22 73.28 14.46 73.34 14.46 75.27 8.22 77.32 8.22 74.27 17.51 72.35 17.51 70.46 11.47 70.38 11.47 68.5 17.51 66.57 17.51 63.52 8.22"
+							style="fill: #0fe7c7"
+						/>
+						<polygon points="79.37 8.22 81.17 8.22 85.68 13.99 85.68 8.22 87.67 8.22 87.67 17.51 85.88 17.51 81.36 11.74 81.36 17.51 79.37 17.51 79.37 8.22" style="fill: #0fe7c7" />
+						<path d="M96.8,25.73H0V0H96.8ZM2.18,23.55H94.62V2.18H2.18Z" transform="translate(0 0)" style="fill: #0fe7c7" />
+					</svg>
+
+					<h1 class="title animate">
+						We are creating<br />
+						something
+					</h1>
+
+					<p class="lead animate">stay tuned</p>
+				</div>
+			</div>
 		</div>
+		<script>
+			function setDelay(e, i) {
+				setTimeout(function () {
+					e.classList.add("fade-in")
+				}, i * 250)
+			}
+			// alternative to DOMContentLoaded
+			document.onreadystatechange = function () {
+				if (document.readyState == "interactive") {
+					var animEls = document.getElementsByClassName("animate")
+					for (var i = 0; i < animEls.length; i++) {
+						setDelay(animEls[i], i)
+					}
+				}
+			}
+		</script>
 	</body>
 </html>

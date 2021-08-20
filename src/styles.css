@@ -1,8 +1,75 @@
 @tailwind base;
 @tailwind components;
 
+@font-face {
+	font-family: "Bely Display";
+	src: url("fonts/BelyDisplay-Regular.woff2") format("woff2"), url("fonts/BelyDisplay-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "TT Norms Pro";
+	src: url("fonts/TTNormsPro-ExtraBold.woff2") format("woff2"), url("fonts/TTNormsPro-ExtraBold.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
 body {
-	@apply bg-white text-gray-700 font-sans;
+	font-family: "TT Norms Pro", Helvetica, Arial, sans-serif;
+	@apply bg-black text-white;
+	font-size: 31.58px;
+}
+
+.logo {
+	height: 68px;
+	margin-bottom: 140px;
+}
+
+.title {
+	font-family: "Bely Display", Helvetica, Arial, sans-serif;
+	font-size: 69.49px;
+	color: #0fe7c7;
+	margin-bottom: 52px;
+}
+
+.logo.animate,
+.title.animate,
+.lead.animate {
+	@apply opacity-0 transition-all duration-1000;
+}
+
+.logo.fade-in,
+.title.fade-in,
+.lead.fade-in {
+	@apply opacity-100;
+}
+@media (min-width: 768px) {
+	br {
+		content: " ";
+		display: none;
+	}
+}
+
+@media (max-width: 767px) {
+	body {
+		font-size: 17.11px;
+	}
+
+	.logo {
+		height: 40px;
+		margin-bottom: 100px;
+	}
+
+	.title {
+		font-size: 34.04px;
+		margin-bottom: 35px;
+	}
+
+	.lead {
+		margin-left: 120px;
+	}
 }
 
 @tailwind utilities;
