@@ -1,11 +1,11 @@
-# Tailwind CSS Boilerplate
+# Coming soon template
 
-Tailwind CSS boilerplate for HTML projects. Bare-bones HTML starter template with Tailwind CSS, PostCSS, Gulp, Browsersync &amp; Imagemin.<br/>
+Boilerplate for HTML coming soon webpage. Bare-bones HTML starter template with Tailwind CSS, PostCSS, Gulp, Browsersync &amp; Imagemin.<br/>
 The main purpose of this boilerplate is to simplify build of quick coming soon/maintenance one-pagers.
 
 ![screenshot](https://raw.githubusercontent.com/richardevcom/unknown-coming-soon/main/screenshot.png)
 
-## How to use this Tailwind CSS Boilerplate
+## How to use this Boilerplate
 
 1. Clone the repository:
 
